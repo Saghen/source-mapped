@@ -1,0 +1,32 @@
+{
+  "name": "sourcemapped",
+  "version": "1.0.0",
+  "description": "Ghost Blog Frontend built in Next.JS",
+  "main": "index.js",
+  "dependencies": {
+    "@tryghost/content-api": "^1.4.13"
+  },
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "next": "^10.0.5",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "readline-sync": "^1.4.10"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "configure": "node src/config/setConfigs.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saghen/sourcemapped.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saghen/sourcemapped/issues"
+  },
+  "homepage": "https://github.com/saghen/sourcemapped#readme"
+}

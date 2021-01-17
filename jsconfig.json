@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@config": ["config/config.js"],
+      "@lib/*": ["lib/*"],
+      "@pages/*": ["pages/*"]
+    }
+  }
+}
