@@ -30,4 +30,4 @@ for (const configName of activeConfigs) {
 
 config.validate({ allowed: 'strict' })
 
-module.exports = config
+export default config 
