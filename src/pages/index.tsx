@@ -1,11 +1,34 @@
+import ArticleCard from '@components/ArticleCard'
+import '@lib/api'
+import { getPosts } from '@lib/posts'
+import type { PostsOrPages } from '@tryghost/content-api'
+import type { GetStaticProps } from 'next'
 import React from 'react'
 
-export default function Index() {
-    return (
-        <div>
-            
-        </div>
-    )
+type IndexProps = {
+  posts: PostsOrPages
 }
 
+export default function index({ posts }: IndexProps) {
+  return (
+    <div>
+      <main>
+        {posts.map((post, idx) => (
+          <ArticleCard key={post.id} post={post} alternate={(idx + 1) % 2 == 0} />
+        ))}
+      </main>
+    </div>
+  )
+}
 
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = await getPosts()
+
+  // console.log(posts)
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 10,
+  }
+}

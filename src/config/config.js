@@ -12,12 +12,12 @@ const config = convict({
     url: {
       doc: 'The url that the API server is hosted on <-- not the port of the node server',
       type: String,
-      default: 'https://sourcemapped.dev',
+      default: process.env.ghostURL,
     },
     contentKey: {
       doc: 'Content API key from Ghost custom integration',
       type: String,
-      default: '',
+      default: process.env.ghostKey,
     },
   },
 })
@@ -30,4 +30,4 @@ for (const configName of activeConfigs) {
 
 config.validate({ allowed: 'strict' })
 
-export default config 
+export default config

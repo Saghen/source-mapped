@@ -1,17 +1,16 @@
 import React from 'react'
+import Header from './Header'
 
 type LayoutProps = {
-    children: React.ReactNode
+  children: React.ReactNode
 }
 
-
 export default function Layout({ children }: LayoutProps) {
-    return (
-        <div>
-            {/* Header and Footer to be added  */}
-            <header></header>
-            {children}
-            <footer></footer>
-        </div>
-    )
+  return (
+    <div>
+      <Header title={'Source Mapped'} />
+      {children}
+      <footer></footer>
+    </div>
+  )
 }

@@ -1,27 +1,27 @@
-import { css, SerializedStyles } from '@emotion/core'
+import { css, SerializedStyles } from '@emotion/react'
 
-
-const desktop = (styles: SerializedStyles): SerializedStyles => {
-    return css`@media (min-width: 1276px) {
-        ${styles}
-    }`
+const desktop = (styles: string): SerializedStyles => {
+  return css`
+    @media (min-width: 1276px) {
+      ${styles}
+    }
+  `
 }
 
-const tablet = (styles: SerializedStyles): SerializedStyles => {
-    return css`@media (max-width: 1276px) {
-        ${styles}
-    }`
+const tablet = (styles: string): SerializedStyles => {
+  return css`
+    @media (max-width: 1276px) {
+      ${styles}
+    }
+  `
 }
 
-const mobile = (styles: SerializedStyles): SerializedStyles => {
-    return css`@media (max-width: 500px) {
-        ${styles}
-    }`
+const mobile = (styles: string): SerializedStyles => {
+  return css`
+    @media (max-width: 500px) {
+      ${styles}
+    }
+  `
 }
 
-export {
-    desktop,
-    tablet,
-    mobile
-}
-
+export { desktop, tablet, mobile }
