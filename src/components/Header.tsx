@@ -4,18 +4,28 @@ import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import { colors, spacing, typography } from '@styles/theme'
 import { mobile } from '@styles/breakpoints'
+import Separator from './Separator'
+import ArrowLeft from './icons/ArrowLeft'
 
 const HeaderStyles = (home: boolean) => css`
   display: flex;
-  justify-content: ${home ? 'center' : 'space-between'};
+  flex-direction: column;
+  align-items: ${home ? 'center' : 'space-between'};
   height: ${home ? '200px' : 'auto'};
-  align-items: ${home ? 'flex-end' : 'center'};
+  justify-content: ${home ? 'flex-end' : 'center'};
   padding: ${spacing.normal};
   > h1 {
+    font-weight: normal;
     font-family: 'Alex Brush', cursive;
-    font-size: ${home ? '64px' : '24px'};
+    font-size: ${home ? '72px' : '24px'};
+    margin-bottom: 24px;
   }
   > a {
+    & > * + * {
+      margin-left: 4px;
+    }
+    display: flex;
+    align-items: center;
     font-family: ${typography.serif};
     text-decoration: none;
     color: ${colors.onBgLight};
@@ -37,14 +47,21 @@ export default function Header({ title }: HeaderProps) {
   const home = router.asPath === '/'
   return (
     <header css={HeaderStyles(home)}>
-      {/* eslint-disable */}
       {!home && (
         <Link href="/">
-          <a>Back to Home</a>
+          <a>
+            <ArrowLeft />
+            <span>Back to Home</span>
+          </a>
         </Link>
       )}
       {/* eslint-enable */}
-      {home && <h1>{title}</h1>}
+      {home && (
+        <>
+          <h1>{title}</h1>
+          <Separator />
+        </>
+      )}
     </header>
   )
 }

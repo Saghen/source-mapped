@@ -11,19 +11,19 @@ import { mobile } from '@styles/breakpoints'
 // could potentially do another file for these *.styles.ts
 const ArticleCardStyles = (alternate: boolean): SerializedStyles => css`
   ${flexCenter};
-  margin: ${spacing.double} 0;
-  padding: ${spacing.double} ${spacing.normal};
+  margin: 0;
+  padding: ${spacing.large} ${spacing.normal};
   background: ${!alternate ? colors.bgLight : colors.bgDark};
   > article {
     max-width: 700px;
     font-family: ${typography.serif};
     font-size: ${typography.body};
     color: ${!alternate ? colors.onBgLight : colors.onBgDark};
-    line-height: 1.4;
+    line-height: 1.6;
     cursor: pointer;
     > header,
     section > * {
-      margin: ${spacing.small} 0;
+      margin-bottom: ${spacing.normal};
     }
     > header {
       span {

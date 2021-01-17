@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './Header'
+import Separator from './Separator'
 
 type LayoutProps = {
   children: React.ReactNode

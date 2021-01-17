@@ -5,7 +5,7 @@ const ContentStyles = css`
   max-width: 700px;
   font-family: ${typography.serif};
   color: ${colors.onBgLight};
-  line-height: 1.4;
+  line-height: 1.6;
   font-size: ${typography.body};
   * {
     margin: ${spacing.normal} 0;

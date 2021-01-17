@@ -4,11 +4,13 @@ import { css } from '@emotion/react'
 import { flexCenter } from '@styles/common'
 import { colors, spacing, typography } from '@styles/theme'
 import { getFormattedDate } from 'utils'
+import Separator from './Separator'
 
 const ArticlePageStyles = css`
   ${flexCenter};
   flex-direction: column;
   padding: ${spacing.normal};
+  line-height: 1.6;
   article {
     > header {
       ${flexCenter};
@@ -25,13 +27,6 @@ const ArticlePageStyles = css`
         address {
           font-style: normal;
         }
-      }
-      hr {
-        min-width: 150px;
-        width: 25%;
-        margin: ${spacing.normal} 0;
-        outline: none;
-        border: 1px solid ${colors.onBgLight};
       }
     }
   }
@@ -51,7 +46,7 @@ export default function ArticlePage({ post }: ArticlePageProps): JSX.Element {
             <address className="author">{post.primary_author?.name}</address>&nbsp;on&nbsp;
             <time dateTime={post.published_at}>{getFormattedDate(post.published_at)}</time>
           </span>
-          <hr />
+          <Separator margin="24px 0 0 0" />
         </header>
         <section>
           <Content content={post.html} />
