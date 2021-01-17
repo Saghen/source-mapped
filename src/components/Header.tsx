@@ -6,6 +6,7 @@ import { colors, spacing, typography } from '@styles/theme'
 import { mobile } from '@styles/breakpoints'
 import Separator from './Separator'
 import ArrowLeft from './icons/ArrowLeft'
+import Title from './icons/Title'
 
 const HeaderStyles = (home: boolean) => css`
   display: flex;
@@ -15,9 +16,6 @@ const HeaderStyles = (home: boolean) => css`
   justify-content: ${home ? 'flex-end' : 'center'};
   padding: ${spacing.normal};
   > h1 {
-    font-weight: normal;
-    font-family: 'Alex Brush', cursive;
-    font-size: ${home ? '72px' : '24px'};
     margin-bottom: 24px;
   }
   > a {
@@ -58,7 +56,9 @@ export default function Header({ title }: HeaderProps) {
       {/* eslint-enable */}
       {home && (
         <>
-          <h1>{title}</h1>
+          <h1>
+            <Title />
+          </h1>
           <Separator />
         </>
       )}
