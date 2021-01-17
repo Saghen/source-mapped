@@ -10,6 +10,7 @@
     "preact-render-to-string": "^5.1.12"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
     "@emotion/babel-preset-css-prop": "^11.0.0",
     "@next/bundle-analyzer": "^10.0.5",
     "@tryghost/content-api": "^1.4.13",
