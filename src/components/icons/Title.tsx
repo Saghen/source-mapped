@@ -1,7 +1,7 @@
 function Title(props: React.SVGProps<SVGSVGElement>): JSX.Element {
   return (
     <svg
-      width="408.816"
+      width="100%"
       height="60.552"
       viewBox="0 0 408.816 60.552"
       xmlns="http://www.w3.org/2000/svg"

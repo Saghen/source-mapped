@@ -17,6 +17,8 @@ const HeaderStyles = (home: boolean) => css`
   padding: ${spacing.normal};
   > h1 {
     margin-bottom: 24px;
+    width: 100%;
+    max-width: 400px;
   }
   > a {
     & > * + * {
@@ -28,12 +30,6 @@ const HeaderStyles = (home: boolean) => css`
     text-decoration: none;
     color: ${colors.onBgLight};
   }
-  ${mobile(`
-        height: ${home ? '125px' : 'auto'};
-        > h1 {
-            font-size: ${home ? '48px' : '24px'} ;
-        }
-    `)}
 `
 
 type HeaderProps = {
