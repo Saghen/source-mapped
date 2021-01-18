@@ -12,9 +12,10 @@ const HeaderStyles = (home: boolean) => css`
   display: flex;
   flex-direction: column;
   align-items: ${home ? 'center' : 'space-between'};
-  height: ${home ? '200px' : 'auto'};
+  height: ${home ? '200px' : '32px'};
   justify-content: ${home ? 'flex-end' : 'center'};
   padding: ${spacing.normal};
+  will-change: height;
   > h1 {
     margin-bottom: 24px;
     width: 100%;

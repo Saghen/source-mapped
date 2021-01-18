@@ -2,7 +2,7 @@ import { PostOrPage } from '@tryghost/content-api'
 import Content from './Content'
 import { css } from '@emotion/react'
 import { flexCenter } from '@styles/common'
-import { colors, spacing, typography } from '@styles/theme'
+import { spacing, typography } from '@styles/theme'
 import { getFormattedDate } from 'utils'
 import Separator from './Separator'
 

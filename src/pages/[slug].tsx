@@ -4,6 +4,7 @@ import { PostOrPage } from '@tryghost/content-api'
 import { GetStaticProps, GetStaticPaths, GetStaticPropsContext } from 'next'
 import Head from 'next/head'
 import React from 'react'
+import { prismifyHTML } from '@lib/pre'
 
 export default function Slug({ post }: { post: PostOrPage }) {
   return (
@@ -37,6 +38,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsContext) => {
   const post = await getPost(params.slug)
+
+  const prismed = prismifyHTML(post.html)
+
+  post.html = prismed
+
   return {
     props: {
       post,
