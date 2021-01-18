@@ -7,8 +7,8 @@ const ContentStyles = css`
   color: ${colors.onBgLight};
   line-height: 1.6;
   font-size: ${typography.body};
-  * {
-    margin: ${spacing.normal} 0;
+  > * {
+    margin: ${spacing.normal} ${spacing.small};
   }
   img {
     width: 100%;
@@ -52,6 +52,8 @@ const ContentStyles = css`
     margin: 0.5em 0;
     overflow: auto;
     background: #1b1d24;
+    max-width: calc(100vw - 1rem);
+    overflow-x: auto;
   }
   :not(pre) > code[class*='language-'] {
     padding: 0.1em 0.3em;
