@@ -1,11 +1,22 @@
 import ArticlePage from '@components/ArticlePage'
 import { getPost, getPosts } from '@lib/posts'
+import { PostOrPage } from '@tryghost/content-api'
 import { GetStaticProps, GetStaticPaths, GetStaticPropsContext } from 'next'
+import Head from 'next/head'
 import React from 'react'
 
-export default function Slug({ post }) {
+export default function Slug({ post }: { post: PostOrPage }) {
   return (
     <div>
+      <Head>
+        <title key="title-tag">{post.title}</title>
+        <meta name="title" content={post.title} key="title" />
+        <meta name="description" content={post.excerpt} key="description" />
+        <meta name="author" content={post.authors.map((author) => author.name).join(', ')} />
+        <meta name="date" content={post.created_at} />
+        <meta name="keywords" content={post.tags.map((tag) => tag.name).join(', ')} />
+        <meta property="og:type" content="article" key="og:type" />
+      </Head>
       <ArticlePage post={post} />
     </div>
   )
