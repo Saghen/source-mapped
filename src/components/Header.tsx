@@ -12,7 +12,7 @@ const HeaderStyles = (home: boolean) => css`
   display: flex;
   flex-direction: column;
   align-items: ${home ? 'center' : 'space-between'};
-  height: ${home ? '200px' : '32px'};
+  height: ${home ? '200px' : '48px'};
   justify-content: ${home ? 'flex-end' : 'center'};
   padding: ${spacing.normal};
   will-change: height;
@@ -24,6 +24,9 @@ const HeaderStyles = (home: boolean) => css`
   > a {
     & > * + * {
       margin-left: 4px;
+    }
+    > svg {
+      margin-top: 2px; // Fixes slight optical alignment issue
     }
     display: flex;
     align-items: center;
