@@ -18,14 +18,16 @@ const ArticlePageStyles = css`
       font-family: ${typography.serif};
       h1 {
         font-size: ${typography.h1};
+        text-align: center;
 
         margin: ${spacing.small} 0;
       }
       span {
         font-size: ${typography.body};
-        display: flex;
+        text-align: center;
         address {
           font-style: normal;
+          display: inline;
         }
       }
     }
