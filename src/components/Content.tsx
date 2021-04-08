@@ -1,10 +1,10 @@
 import { css } from '@emotion/react'
-import { colors, spacing, typography } from '@styles/theme'
+import { spacing, typography } from '@styles/theme'
 
 const ContentStyles = css`
   max-width: 700px;
   font-family: ${typography.serif};
-  color: ${colors.onBgLight};
+  color: var(--text);
   line-height: 1.6;
   font-size: ${typography.body};
   > * {
@@ -51,7 +51,7 @@ const ContentStyles = css`
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
-    background: #1b1d24;
+    background: var(--bgContrast);
     max-width: calc(100vw - 1rem);
     overflow-x: auto;
   }
@@ -99,7 +99,7 @@ const ContentStyles = css`
   .language-css .token.string,
   .style .token.string {
     color: #cccccc;
-    background: #1b1d24;
+    background: var(--bgContrast);
   }
   .token.atrule,
   .token.attr-value,

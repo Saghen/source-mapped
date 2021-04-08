@@ -2,7 +2,7 @@ import React from 'react'
 import { css } from '@emotion/react'
 import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
-import { colors, spacing, typography } from '@styles/theme'
+import { spacing, typography } from '@styles/theme'
 import { mobile } from '@styles/breakpoints'
 import Separator from './Separator'
 import ArrowLeft from './icons/ArrowLeft'
@@ -32,7 +32,7 @@ const HeaderStyles = (home: boolean) => css`
     align-items: center;
     font-family: ${typography.serif};
     text-decoration: none;
-    color: ${colors.onBgLight};
+    color: var(--text);
   }
 `
 

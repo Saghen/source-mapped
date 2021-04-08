@@ -1,14 +1,3 @@
-const colors = {
-  bgLight: '#fff',
-  bgDark: '#1b1d24',
-  primary: '#3498db',
-  primaryVariant: '#67cbff',
-  onBgLight: '#2a2d38',
-  onBgDark: '#ccc',
-  headerLight: '#1b1d24',
-  headerDark: '#fff',
-}
-
 const typography = {
   serif: "'Roboto Slab', serif",
   body: '18px',
@@ -24,4 +13,4 @@ const spacing = {
   large: '4rem',
 }
 
-export { colors, typography, spacing }
+export { typography, spacing }

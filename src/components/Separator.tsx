@@ -1,10 +1,9 @@
 import { css } from '@emotion/react'
-import { colors } from '@styles/theme'
 
 const SeparatorStyles = (props: SeparatorProps) => css`
   width: ${props.width ?? '150px'};
   height: 2px;
-  background: ${colors.onBgLight};
+  background: var(--separator);
   ${props.margin && `margin: ${props.margin}`}
 `
 

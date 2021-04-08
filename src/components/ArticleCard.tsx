@@ -1,8 +1,7 @@
-import React from 'react'
 import { css, SerializedStyles } from '@emotion/react'
 import type { PostOrPage } from '@tryghost/content-api'
 import { flexCenter } from '@styles/common'
-import { colors, spacing, typography } from '@styles/theme'
+import { spacing, typography } from '@styles/theme'
 import { getFormattedDate } from 'utils'
 import Link from 'next/link'
 import ArrowRight from './icons/ArrowRight'
@@ -13,12 +12,12 @@ const ArticleCardStyles = (alternate: boolean): SerializedStyles => css`
   ${flexCenter};
   margin: 0;
   padding: ${spacing.large} ${spacing.normal};
-  background: ${!alternate ? colors.bgLight : colors.bgDark};
+  background: var(${!alternate ? '--bg' : '--bgContrast'});
   > article {
     max-width: 700px;
     font-family: ${typography.serif};
     font-size: ${typography.body};
-    color: ${!alternate ? colors.onBgLight : colors.onBgDark};
+    color: var(${!alternate ? '--text' : '--textOnContrast'});
     line-height: 1.6;
     cursor: pointer;
     > header,
@@ -27,11 +26,11 @@ const ArticleCardStyles = (alternate: boolean): SerializedStyles => css`
     }
     > header {
       span {
-        color: ${!alternate ? colors.primary : colors.primaryVariant};
+        color: var(${!alternate ? '--primary' : '--primaryText'});
         text-transform: uppercase;
       }
       h2 {
-        color: ${!alternate ? colors.headerLight : colors.headerDark};
+        color: var(${!alternate ? '--header' : '--headerOnContrast'});
       }
     }
 
