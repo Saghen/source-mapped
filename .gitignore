@@ -104,7 +104,7 @@ dist
 .tern-port
 
 # Ignore NPM package-lock.json
-package-lock.json
+# package-lock.json
 
 # Ignore secrets
 src/config/configs/secrets.json
