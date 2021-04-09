@@ -4,7 +4,7 @@
   "description": "Ghost Blog Frontend built in Next.JS",
   "main": "index.js",
   "dependencies": {
-    "@emotion/react": "^11.1.4",
+    "@emotion/react": "^11.1.5",
     "node-html-parser": "^2.0.2",
     "preact": "^10.5.10",
     "preact-context-provider": "^1.2.1",

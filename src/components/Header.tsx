@@ -3,7 +3,6 @@ import { css } from '@emotion/react'
 import { useRouter } from 'next/dist/client/router'
 import Link from 'next/link'
 import { spacing, typography } from '@styles/theme'
-import { mobile } from '@styles/breakpoints'
 import Separator from './Separator'
 import ArrowLeft from './icons/ArrowLeft'
 import Title from './icons/Title'
@@ -36,11 +35,7 @@ const HeaderStyles = (home: boolean) => css`
   }
 `
 
-type HeaderProps = {
-  title: string
-}
-
-export default function Header({ title }: HeaderProps) {
+export default function Header() {
   const router = useRouter()
   const home = router.asPath === '/'
   return (
