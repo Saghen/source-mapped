@@ -8,7 +8,7 @@ type LayoutProps = {
 export default function Layout({ children }: LayoutProps) {
   return (
     <div>
-      <Header title={'Source Mapped'} />
+      <Header />
 
       {children}
 
