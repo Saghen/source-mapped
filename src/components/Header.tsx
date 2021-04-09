@@ -7,19 +7,14 @@ import Separator from './Separator'
 import ArrowLeft from './icons/ArrowLeft'
 import Title from './icons/Title'
 
-const HeaderStyles = (home: boolean) => css`
+const HeaderStyles = css`
   display: flex;
   flex-direction: column;
-  align-items: ${home ? 'center' : 'space-between'};
-  height: ${home ? '200px' : '48px'};
-  justify-content: ${home ? 'flex-end' : 'center'};
+  align-items: space-between;
+  height: 48px;
+  justify-content: center;
   padding: ${spacing.normal};
   will-change: height;
-  > h1 {
-    margin-bottom: 24px;
-    width: 100%;
-    max-width: 400px;
-  }
   > a {
     & > * + * {
       margin-left: 4px;
@@ -35,28 +30,42 @@ const HeaderStyles = (home: boolean) => css`
   }
 `
 
+const HomeHeaderStyles = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 200px;
+  justify-content: flex-end;
+  padding: ${spacing.normal};
+  will-change: height;
+  > h1 {
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 400px;
+  }
+`
+
 export default function Header() {
   const router = useRouter()
-  const home = router.asPath === '/' || router.asPath === ''
+  const home = router.asPath === '/'
+
+  if (home)
+    return (
+      <header css={HomeHeaderStyles}>
+        <h1>
+          <Title />
+        </h1>
+        <Separator />
+      </header>
+    )
   return (
-    <header css={HeaderStyles(home)}>
-      {!home && (
-        <Link href="/">
-          <a>
-            <ArrowLeft />
-            <span>Back to Home</span>
-          </a>
-        </Link>
-      )}
-      {/* eslint-enable */}
-      {home && (
-        <>
-          <h1>
-            <Title />
-          </h1>
-          <Separator />
-        </>
-      )}
+    <header css={HeaderStyles}>
+      <Link href="/">
+        <a>
+          <ArrowLeft />
+          <span>Back to Home</span>
+        </a>
+      </Link>
     </header>
   )
 }
