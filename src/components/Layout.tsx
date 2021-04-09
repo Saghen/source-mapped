@@ -9,10 +9,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div>
       <Header />
-
       {children}
-
-      <footer></footer>
     </div>
   )
 }

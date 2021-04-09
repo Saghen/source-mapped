@@ -37,7 +37,7 @@ const HeaderStyles = (home: boolean) => css`
 
 export default function Header() {
   const router = useRouter()
-  const home = router.asPath === '/'
+  const home = router.asPath === '/' || router.asPath === ''
   return (
     <header css={HeaderStyles(home)}>
       {!home && (
