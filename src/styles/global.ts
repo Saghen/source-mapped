@@ -27,6 +27,18 @@ export const global = css`
     --textOnContrast: #ccc;
     --header: #1b1d24;
     --headerOnContrast: #fff;
+
+    --red: #e06c75;
+    --red-alt: #8c4349;
+
+    --purple: #c678dd;
+    --purple-alt: #9f60b3;
+
+    --cyan: #56b6c2;
+
+    --orange: #e08d6c;
+
+    --lime: #a9c379;
   }
 
   @media (prefers-color-scheme: dark) {

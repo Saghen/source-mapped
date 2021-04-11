@@ -5,7 +5,7 @@
     ],
     "plugins": [
         ["prismjs", {
-          "languages": ["javascript", "rust"]
+          "languages": ["javascript", "rust", "typescript", "cpp", "c"]
         }]
       ]
 }

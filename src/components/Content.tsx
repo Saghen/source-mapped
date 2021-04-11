@@ -147,6 +147,17 @@ const ContentStyles = css`
     line-height: inherit;
     white-space: pre;
   }
+
+  /**
+  * Links
+  */
+  a {
+    color: var(--primary);
+  }
+
+  a:visited {
+    color: var(--purple);
+  }
 `
 
 type ContentProps = {
