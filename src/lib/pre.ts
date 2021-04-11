@@ -12,7 +12,6 @@ export const prismifyHTML = (html: string): string => {
     const code = parse(pre.childNodes[0].rawText).querySelector('code')
     const lang = code.classNames.find((elem) => elem.startsWith('language'))?.split('-')[1]
     if (lang) {
-      console.log(Prism.languages['js'])
       const prismed = Prism.highlight(he.decode(code.innerText), Prism.languages[lang], lang)
       code.set_content(prismed)
       pre.set_content(code)

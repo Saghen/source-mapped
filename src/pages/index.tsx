@@ -24,7 +24,6 @@ export default function index({ posts }: IndexProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const posts = await getPosts()
 
-  // console.log(posts)
   return {
     props: {
       posts,
