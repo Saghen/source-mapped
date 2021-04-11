@@ -22,17 +22,17 @@ export const global = css`
     --separator: var(--text);
 
     --primary: #3498db;
-    --primaryText: #67cbff;
+    --primaryText: #3498db;
     --text: #2a2d38;
     --textOnContrast: #ccc;
     --header: #1b1d24;
     --headerOnContrast: #fff;
 
-    --red: #e06c75;
-    --red-alt: #8c4349;
+    --red: #8c4349;
+    --red-alt: #e06c75;
 
-    --purple: #c678dd;
-    --purple-alt: #9f60b3;
+    --purple: #9f60b3;
+    --purple-alt: #c678dd;
 
     --cyan: #56b6c2;
 
@@ -47,10 +47,18 @@ export const global = css`
       --bgContrast: #23252c;
       --separator: #fff;
 
+      --primaryText: #67cbff;
+
       --text: #ddd;
       --textOnContrast: var(--text);
       --header: #fff;
       --headerOnContrast: var(--headerOnContrast);
+
+      --red: #e06c75;
+      --red-alt: #8c4349;
+
+      --purple: #c678dd;
+      --purple-alt: #9f60b3;
     }
   }
 

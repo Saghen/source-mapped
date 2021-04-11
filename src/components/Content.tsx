@@ -152,11 +152,19 @@ const ContentStyles = css`
   * Links
   */
   a {
-    color: var(--primary);
+    color: var(--primaryText);
   }
 
   a:visited {
     color: var(--purple);
+  }
+
+  /**
+  * Block quotes
+  */
+  blockquote {
+    border-left: 2px var(--text) solid;
+    padding-left: 16px;
   }
 `
 
