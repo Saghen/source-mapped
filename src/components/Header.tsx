@@ -47,7 +47,7 @@ const HomeHeaderStyles = css`
 
 export default function Header() {
   const router = useRouter()
-  const home = router.asPath === '/'
+  const home = router.pathname === '/'
 
   if (!home)
     return (
