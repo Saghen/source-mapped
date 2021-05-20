@@ -1,10 +1,11 @@
+import React from 'react'
 import ArticlePage from '@components/ArticlePage'
 import { getPost, getPosts } from '@lib/posts'
 import { PostOrPage } from '@tryghost/content-api'
 import { GetStaticProps, GetStaticPaths, GetStaticPropsContext } from 'next'
 import Head from 'next/head'
-import React from 'react'
 import { prismifyHTML } from '@lib/pre'
+import ArticleHeader from '@components/ArticleHeader'
 
 export default function Slug({ post }: { post: PostOrPage }) {
   return (
@@ -18,6 +19,7 @@ export default function Slug({ post }: { post: PostOrPage }) {
         <meta name="keywords" content={post.tags.map((tag) => tag.name).join(', ')} />
         <meta property="og:type" content="article" key="og:type" />
       </Head>
+      <ArticleHeader />
       <ArticlePage post={post} />
     </div>
   )

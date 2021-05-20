@@ -1,9 +1,10 @@
+import React from 'react'
 import ArticleCard from '@components/ArticleCard'
+import Header from '@components/Header'
 import '@lib/api'
 import { getPosts } from '@lib/posts'
 import type { PostsOrPages } from '@tryghost/content-api'
 import type { GetStaticProps } from 'next'
-import React from 'react'
 
 type IndexProps = {
   posts: PostsOrPages
@@ -12,6 +13,7 @@ type IndexProps = {
 export default function index({ posts }: IndexProps) {
   return (
     <div>
+      <Header />
       <main>
         {posts.map((post, idx) => (
           <ArticleCard key={post.id} post={post} alternate={(idx + 1) % 2 == 0} />

@@ -1,12 +1,12 @@
+import React from 'react'
 import { Global } from '@emotion/react'
 import type { AppProps } from 'next/app'
 import { global as globalStyles } from '@styles/global'
 import Head from 'next/head'
-import Layout from '@components/Layout'
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <>
       <Head>
         <title key="title-tag">Source Mapped</title>
         <meta name="title" content="Source Mapped" key="title" />
@@ -28,7 +28,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <Global styles={globalStyles} />
       <Component {...pageProps} />
-    </Layout>
+    </>
   )
 }
 
