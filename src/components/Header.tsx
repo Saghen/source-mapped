@@ -49,23 +49,23 @@ export default function Header() {
   const router = useRouter()
   const home = router.asPath === '/'
 
-  if (home)
+  if (!home)
     return (
-      <header css={HomeHeaderStyles}>
-        <h1>
-          <Title />
-        </h1>
-        <Separator />
+      <header css={HeaderStyles}>
+        <Link href="/">
+          <a>
+            <ArrowLeft />
+            <span>Back to Home</span>
+          </a>
+        </Link>
       </header>
     )
   return (
-    <header css={HeaderStyles}>
-      <Link href="/">
-        <a>
-          <ArrowLeft />
-          <span>Back to Home</span>
-        </a>
-      </Link>
+    <header css={HomeHeaderStyles}>
+      <h1>
+        <Title />
+      </h1>
+      <Separator />
     </header>
   )
 }
