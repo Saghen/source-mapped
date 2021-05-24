@@ -21,7 +21,7 @@ const HomeHeaderStyles = css`
 export default function Header() {
   return (
     <header css={HomeHeaderStyles}>
-      <h1>
+      <h1 aria-label="Source Mapped">
         <Title />
       </h1>
       <Separator />
